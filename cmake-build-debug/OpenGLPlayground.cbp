@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="OpenGLPlayground"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/elainezhong/Desktop/GitHub/OpenGLRasterizer/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/elainezhong/Desktop/GitHub/OpenGLRasterizer/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/elainezhong/Desktop/GitHub/OpenGLRasterizer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/elainezhong/Desktop/GitHub/OpenGLRasterizer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/elainezhong/Desktop/GitHub/OpenGLRasterizer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/elainezhong/Desktop/GitHub/OpenGLRasterizer/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/elainezhong/Desktop/GitHub/OpenGLRasterizer/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/elainezhong/Desktop/GitHub/OpenGLRasterizer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/elainezhong/Desktop/GitHub/OpenGLRasterizer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/elainezhong/Desktop/GitHub/OpenGLRasterizer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/elainezhong/Desktop/GitHub/OpenGLRasterizer/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/elainezhong/Desktop/GitHub/OpenGLRasterizer/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/elainezhong/Desktop/GitHub/OpenGLRasterizer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/elainezhong/Desktop/GitHub/OpenGLRasterizer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/elainezhong/Desktop/GitHub/OpenGLRasterizer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="OpenGLPlayground">
+				<Option output="/Users/elainezhong/Desktop/GitHub/OpenGLRasterizer/cmake-build-debug/OpenGLPlayground" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/elainezhong/Desktop/GitHub/OpenGLRasterizer/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/elainezhong/Desktop/GitHub/OpenGLRasterizer/libs/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/elainezhong/Desktop/GitHub/OpenGLRasterizer/cmake-build-debug/Makefile&quot;  VERBOSE=1 OpenGLPlayground"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/elainezhong/Desktop/GitHub/OpenGLRasterizer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/elainezhong/Desktop/GitHub/OpenGLRasterizer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/elainezhong/Desktop/GitHub/OpenGLRasterizer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="OpenGLPlayground/fast">
+				<Option output="/Users/elainezhong/Desktop/GitHub/OpenGLRasterizer/cmake-build-debug/OpenGLPlayground" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/elainezhong/Desktop/GitHub/OpenGLRasterizer/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/elainezhong/Desktop/GitHub/OpenGLRasterizer/libs/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk/System/Library/Frameworks/OpenGL.framework"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.5/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/elainezhong/Desktop/GitHub/OpenGLRasterizer/cmake-build-debug/Makefile&quot;  VERBOSE=1 OpenGLPlayground/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/elainezhong/Desktop/GitHub/OpenGLRasterizer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/elainezhong/Desktop/GitHub/OpenGLRasterizer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/elainezhong/Desktop/GitHub/OpenGLRasterizer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/elainezhong/Desktop/GitHub/OpenGLRasterizer/glad.c">
+			<Option target="OpenGLPlayground"/>
+		</Unit>
+		<Unit filename="/Users/elainezhong/Desktop/GitHub/OpenGLRasterizer/main.cpp">
+			<Option target="OpenGLPlayground"/>
+		</Unit>
+		<Unit filename="/Users/elainezhong/Desktop/GitHub/OpenGLRasterizer/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
