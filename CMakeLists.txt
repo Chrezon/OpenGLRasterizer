@@ -4,7 +4,9 @@ project(OpenGLPlayground)
 set(CMAKE_CXX_STANDARD 14)
 
 # TODO: How to make this add all the .c and .cpp files? wildcards?
-add_executable(OpenGLPlayground src/main.cpp libs/glad.c)
+add_executable(OpenGLPlayground
+        src/main.cpp
+        libs/glad.c)
 
 # MODIFY THIS FOR WHAT MAKES SENSE!
 include_directories(libs/include)
