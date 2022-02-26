@@ -87,6 +87,12 @@
 		<Unit filename="/Users/elainezhong/Desktop/GitHub/OpenGLRasterizer/libs/glad.c">
 			<Option target="OpenGLPlayground"/>
 		</Unit>
+		<Unit filename="/Users/elainezhong/Desktop/GitHub/OpenGLRasterizer/src/GLShader.cpp">
+			<Option target="OpenGLPlayground"/>
+		</Unit>
+		<Unit filename="/Users/elainezhong/Desktop/GitHub/OpenGLRasterizer/src/GLShader.h">
+			<Option target="OpenGLPlayground"/>
+		</Unit>
 		<Unit filename="/Users/elainezhong/Desktop/GitHub/OpenGLRasterizer/src/main.cpp">
 			<Option target="OpenGLPlayground"/>
 		</Unit>

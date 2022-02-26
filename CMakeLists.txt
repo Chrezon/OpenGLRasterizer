@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 14)
 # TODO: How to make this add all the .c and .cpp files? wildcards?
 add_executable(OpenGLPlayground
         src/main.cpp
-        libs/glad.c)
+        libs/glad.c src/GLShader.h src/GLShader.cpp)
 
 # MODIFY THIS FOR WHAT MAKES SENSE!
 include_directories(libs/include)
