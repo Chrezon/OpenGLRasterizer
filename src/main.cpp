@@ -84,7 +84,6 @@ int main() {
     // Set up resizing callback -> tell OpenGL the callback function to use
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
-    // TODO: VERTEX SHADER STARTS HERE *********************************************************
     // OpenGL processes normalized device coordinates [-1.0, 1.0]
     // We use 0.0f on the z-axis since we want 2D shapes for now
     // transformed to screenspace coords via viewport transform -> specify data via glViewport
@@ -94,6 +93,7 @@ int main() {
             0.0f,  0.5f, 0.0f
     };
 
+    // TODO: VERTEX BUFFER OBJECT **************************************************************
     // After defining vertex data, we send it to vertex shader
     //      - Create memory on GPU to store the data
     //      - Configure how OpenGL should interpret the memory
@@ -114,6 +114,7 @@ int main() {
     // GL_DYNAMIC_DRAW: data changed frequently and used a lot (dynamic)
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
+    // TODO: VERTEX SHADER STARTS HERE *********************************************************
     unsigned int vertexShader;
     vertexShader = glCreateShader(GL_VERTEX_SHADER); // empty shader with type specified and return referemce ID
 
@@ -166,7 +167,30 @@ int main() {
     glDeleteShader(fragmentShader);
 
     // TODO: LINKING VERTEX ATTRIBUTES HERE ***************************************************
+    // glVertexAttribPointer(index, size, type, normalized, normalized, stride, pointer)
+    // index: which vertex attribute to configure, location of position was set to 0
+    //          since we want to pass data to this attribute, we put 0
+    // size: vertex is a vec3 -> so 3 values
+    // tyoe: each piece of data is a float
+    // normalized: do we want data to be normalized? not relevant for now
+    // stride: space between consecutive vertex attributes
+    // offset: where position data begins in the buffer -> at the start of data array so just 0
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*) 0);
+    glEnableVertexAttribArray(0); // emable vertex attributes
 
+    // TODO: VERTEX ARRAY OBJECT **************************************************************
+    // VAO is like a VBO and can be bound, any vertex attribute calls from that point will be stored in VAO
+    // However when configuring vertex attribute pointers we only have to do that call once
+    // and bind the the right VAO -> switch between vertex data + attribute configs easy
+    unsigned int VAO;
+    glGenVertexArrays(1, &VAO);
+    glBindVertexArray(VAO);
+    // Now we bind and configure corresponding VBOs
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*) 0);
+    glEnableVertexAttribArray(0);
 
     // TODO: THE RENDER LOOP IS HERE **********************************************************
     while(!glfwWindowShouldClose(window)) // Check if we should close
@@ -179,6 +203,12 @@ int main() {
         // Clear the colour buffer to the clear colour so we don't see the stuff from last frame -> state-using function
         // we can also clear the depth buffer: GL_DEPTH_BUFFER_BIT and stencil buffer: GL_STENCIL_BUFFER_BIT
         glClear(GL_COLOR_BUFFER_BIT);
+
+        // draw some stuff
+        glUseProgram(shaderProgram);
+        glBindVertexArray(VAO);
+        glDrawArrays(GL_TRIANGLES, 0, 3);
+
         // Swap colour buffer and show it as output to the screen
         glfwSwapBuffers(window);
         // Are there events that happened? if so, update window state and call appropriate callback methods
