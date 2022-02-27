@@ -33,9 +33,16 @@ int main() {
 
     // Vertices
     float vertices[] = {
-            0.0f,  0.5f, 1.0f, 0.0f, 0.0f, // Vertex 1: Red
-            0.5f, -0.5f, 0.0f, 1.0f, 0.0f, // Vertex 2: Green
-            -0.5f, -0.5f, 0.0f, 0.0f, 1.0f  // Vertex 3: Blue
+            -0.5f,  0.5f, 1.0f, 0.0f, 0.0f, // Top-left
+            0.5f,  0.5f, 0.0f, 1.0f, 0.0f, // Top-right
+            0.5f, -0.5f, 0.0f, 0.0f, 1.0f, // Bottom-right
+            -0.5f, -0.5f, 1.0f, 1.0f, 1.0f  // Bottom-left
+
+    };
+
+    GLuint elements[] = {
+            0, 1, 2,
+            2, 3, 0
     };
 
     { // Set up Vertex Array Object -> stores attribute links + VBO
@@ -47,6 +54,11 @@ int main() {
         glGenBuffers(1, &VBO);
         glBindBuffer(GL_ARRAY_BUFFER, VBO); // This binds to the VAO
         glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+
+        GLuint EBO;
+        glGenBuffers(1, &EBO);
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+        glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(elements), elements, GL_STATIC_DRAW);
 
         // Load some shaders:
         char* vertexShaderSource = readFile("../Assets/Shaders/VertexShader.glsl");
@@ -106,11 +118,14 @@ int main() {
 
         // Render Loop
         glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
+        // glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); // Wireframe
+        // glPolygonMode(GL_FRONT_AND_BACK, GL_FILL); // Filled
         while (!glfwWindowShouldClose(window)) {
             processInput(window);
 
             glClear(GL_COLOR_BUFFER_BIT);
-            glDrawArrays(GL_TRIANGLES, 0, 3);
+            //glDrawArrays(GL_TRIANGLES, 0, 3);
+            glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
             glfwSwapBuffers(window);
             glfwPollEvents();
