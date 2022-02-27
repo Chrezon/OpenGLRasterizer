@@ -33,16 +33,14 @@ int main() {
 
     // Vertices
     float vertices[] = {
-            -0.5f,  0.5f, 1.0f, 0.0f, 0.0f, // Top-left
-            0.5f,  0.5f, 0.0f, 1.0f, 0.0f, // Top-right
-            0.5f, -0.5f, 0.0f, 0.0f, 1.0f, // Bottom-right
-            -0.5f, -0.5f, 1.0f, 1.0f, 1.0f  // Bottom-left
+            -0.5f,  -0.5f, 1.0f, 0.0f, 0.0f, // Top-left
+            0.5f,  -0.5f, 0.0f, 1.0f, 0.0f, // Top-right
+            0.0f, 0.5f, 0.0f, 0.0f, 1.0f, // Bottom-right
 
     };
 
     GLuint elements[] = {
             0, 1, 2,
-            2, 3, 0
     };
 
     { // Set up Vertex Array Object -> stores attribute links + VBO
@@ -125,7 +123,7 @@ int main() {
 
             glClear(GL_COLOR_BUFFER_BIT);
             //glDrawArrays(GL_TRIANGLES, 0, 3);
-            glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+            glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, 0);
 
             glfwSwapBuffers(window);
             glfwPollEvents();
