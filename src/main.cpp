@@ -33,10 +33,10 @@ int main() {
 
     // Vertices
     float vertices[] = {
-            -0.5f,  0.5f, 1.0f, 0.0f, 0.0f, // Top-left
-            0.5f,  0.5f, 0.0f, 1.0f, 0.0f, // Top-right
-            0.5f, -0.5f, 0.0f, 0.0f, 1.0f, // Bottom-right
-            -0.5f, -0.5f, 1.0f, 1.0f, 1.0f  // Bottom-left
+            -0.5f,  0.5f, 1.0f, // Top-left
+            0.5f,  0.5f, 0.5f, // Top-right
+            0.5f, -0.5f, 0.0f, // Bottom-right
+            -0.5f, -0.5f, 0.5f // Bottom-left
 
     };
 
@@ -109,11 +109,11 @@ int main() {
         // We already bound the VBO to GL_ARRAY_BUFFER
         GLint posAttrib = glGetAttribLocation(shaderProgram, "position"); // search by string
         // This function will bind this information, and the VBO that is currently bound to GL_ARRAY_BUFFER
-        glVertexAttribPointer(posAttrib, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*) 0);
+        glVertexAttribPointer(posAttrib, 2, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*) 0);
         glEnableVertexAttribArray(posAttrib);
 
         GLint colAttrib = glGetAttribLocation(shaderProgram, "colour");
-        glVertexAttribPointer(colAttrib, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)(2*sizeof(float)));
+        glVertexAttribPointer(colAttrib, 1, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)(2*sizeof(float)));
         glEnableVertexAttribArray(colAttrib);
 
         // Render Loop

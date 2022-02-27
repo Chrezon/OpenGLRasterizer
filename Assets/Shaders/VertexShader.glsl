@@ -1,9 +1,9 @@
 #version 330 core
 
 in vec2 position;
-in vec3 colour;
+in float colour;
 
-out vec3 Colour;
+out float Colour;
 
 void main()
 {
