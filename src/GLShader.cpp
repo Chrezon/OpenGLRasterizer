@@ -29,6 +29,10 @@ Shader::Shader(const char* vertexPath, const char* fragmentPath) {
     char* vertexShaderSource = readFile(vertexPath);
     GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
     glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);
+
+    // TODO: Somehow give the option of using a uniform mat4 for transformations
+    // TODO: That doesn't seem like the wisest choice
+
     delete [] vertexShaderSource; // free the memory of the char*
     glCompileShader(vertexShader);
 

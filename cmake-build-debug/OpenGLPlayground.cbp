@@ -93,6 +93,9 @@
 		<Unit filename="/Users/elainezhong/Desktop/GitHub/OpenGLRasterizer/src/GLShader.h">
 			<Option target="OpenGLPlayground"/>
 		</Unit>
+		<Unit filename="/Users/elainezhong/Desktop/GitHub/OpenGLRasterizer/src/GLTransform.h">
+			<Option target="OpenGLPlayground"/>
+		</Unit>
 		<Unit filename="/Users/elainezhong/Desktop/GitHub/OpenGLRasterizer/src/main.cpp">
 			<Option target="OpenGLPlayground"/>
 		</Unit>
